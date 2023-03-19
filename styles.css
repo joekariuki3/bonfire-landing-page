@@ -1,0 +1,205 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+.container .navbar {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  font-size: 1.2rem;
+}
+.container .navbar .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style: none;
+}
+.container .navbar .menu a {
+  text-decoration: none;
+  color: black;
+}
+.container .navbar .menu a:hover {
+  cursor: pointer;
+  color: #f27222;
+  border-bottom: 1px solid black;
+}
+.container .navbar .nav-btn p {
+  text-align: end;
+}
+.container .navbar .nav-btn a {
+  text-decoration: none;
+  color: black;
+}
+.container .navbar .nav-btn a:hover {
+  cursor: pointer;
+  color: #f27222;
+  border-bottom: 1px solid black;
+}
+.container .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  align-content: center;
+}
+.container .content .content-img img {
+  width: 350px;
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .content .content-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+.container .content .content-details .header {
+  margin: -50px 0 0 0;
+  font-size: 1.2rem;
+}
+.container .content .content-details .form {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  margin: 1.1rem 0 0.6rem 0;
+  text-align: center;
+}
+.container .content .content-details .form input[type=email] {
+  padding: 0.8rem;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  margin: 0 0.8rem 0 0;
+  font-size: 0.8rem;
+}
+.container .content .content-details .form input[type=submit] {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(36, 36, 245);
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+.container .content .content-details .form input[type=submit]:hover {
+  cursor: pointer;
+  background: blue;
+}
+.container .content .content-details .form h4 {
+  font-size: 10px;
+  color: gray;
+}
+.container .content .content-details .stores {
+  display: flex;
+  gap: 1rem;
+  margin: auto;
+}
+.container .content .content-details .stores img {
+  width: 120px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #555a28;
+  color: white;
+  text-align: start;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  padding: 0.5rem 2rem;
+}
+.footer h2 {
+  color: #f27222;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 5px;
+}
+.footer a:hover {
+  cursor: pointer;
+  color: #f27222;
+}
+.footer .access {
+  padding: 10px 0 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .contacts {
+  padding: 10px;
+}
+.footer .socials {
+  padding: 10px;
+}
+.footer .socials .social-img {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.footer .socials .social-img img {
+  width: 40px;
+}
+
+@media only screen and (max-width : 768px) {
+  .header {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width : 480px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .container .navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  .container .navbar .logo {
+    margin: auto;
+  }
+  .container .navbar .menu {
+    margin: auto;
+    text-align: center;
+  }
+  .container .navbar .nav-btn {
+    margin: auto;
+  }
+  .container .content {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+  .container .content .header h1 {
+    font-size: 1.7rem;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding: 0;
+  }
+  .footer .socials {
+    grid-column: span 2;
+    margin: auto;
+    text-align: center;
+  }
+}/*# sourceMappingURL=styles.css.map */

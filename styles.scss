@@ -1,0 +1,223 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr;
+    margin:auto;
+    margin-bottom: 5rem;
+.navbar {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    font-size: 1.2rem;
+    .menu{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none; 
+        a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                cursor: pointer;
+                color: #f27222;
+                border-bottom:1px solid black ;
+            }
+        }
+    } 
+    .nav-btn{
+        p{
+            text-align: end;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                cursor: pointer;
+                color: #f27222;
+                border-bottom:1px solid black ;
+            }
+        }
+    }
+  }
+
+  .content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+    align-content: center;
+    .content-img{
+        img{
+            width:350px ;
+            border-radius: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .content-details{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        .header {
+            margin: -50px 0 0 0;
+            font-size: 1.2rem;
+        }
+        .form{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: auto;
+            margin: 1.1rem 0 0.6rem 0;
+            text-align: center;
+            input[type=email]{
+                padding: 0.8rem;
+                border-radius: 10px;
+                outline: none;
+                border: 1px solid gray;
+                margin: 0 0.8rem 0 0;
+                font-size: 0.8rem;
+            }
+            input[type=submit]{
+                padding: 15px;
+                border-radius: 10px;
+                background-color: rgb(36, 36, 245);
+                color: white;
+                border: none;
+                font-size: 14px;
+                &:hover{
+                    cursor: pointer;
+                    background: blue;
+                }
+            }
+            h4{
+                font-size: 10px;
+                color: gray;
+            }
+        }
+        .stores{
+            display: flex;
+            gap: 1rem;
+            margin: auto;
+
+            img{
+                width: 120px;
+            }
+        }
+        
+    }
+     
+  }
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #555a28;
+    color: white;
+    text-align: start;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    padding: 0.5rem 2rem;
+    h2{
+        color: #f27222;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        margin-bottom: 5px;
+        &:hover{
+            cursor: pointer;
+            color: #f27222;
+        }
+    }
+    .access{
+        padding:10px 0 0 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .contacts{
+        padding: 10px;
+    }
+    .socials{
+        padding: 10px;
+        .social-img{
+            display: flex;
+          flex-direction: row;
+          gap: 1rem;
+            align-items: center;
+            img{
+                width: 40px;
+            }
+        }
+        
+    }
+}
+
+
+// media query
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 480px)";
+
+// tablets
+@media #{$media-tablet} {
+    .header{
+        font-size: 1.1rem;
+    }
+  }
+
+  // mobile
+  @media #{$media-mobile} {
+    .container{
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 2rem;
+        .navbar{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: auto;
+            margin-bottom: 0;
+            font-size: 1rem;
+            .logo{
+                margin: auto;
+            }
+            .menu{
+                margin: auto;
+                text-align: center;
+            }
+            .nav-btn{
+                margin: auto;
+            }
+        }
+        .content{
+            display: grid;
+            gap: 5rem;
+            grid-template-columns: 1fr;
+            margin-top: 0;
+            .header h1{
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    padding: 0;
+    .socials{
+        grid-column: span 2;
+        margin: auto;
+        text-align: center;
+    }
+    }
+  }
